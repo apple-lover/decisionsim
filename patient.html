@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
+	<title>DecisionSIM</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>	
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#">
+                <img src="image/logo.png" id="logo"/>
+            </a>
+        </div>
+        <div class="mainarea">
+            <div class="title_area">
+                <span class="heading">My Cases</span> > <span class="chapter">Test Sim</span> > <span class="section">"Christina"</span>
+            </div>
+            <div class="mainbody patient_body">
+                <div class="leftbody">
+                    <a href="christina.html">
+                        <div class="items item_unselect">
+                            <P class="item_title">
+                                "CHRISTINA"
+                            </P>
+                            <p class="item_content">
+                                CASE DISPLAY SETTINGS
+                            </p>
+                        </div>
+                    </a>
+                    <a href="christina.html">
+                        <div class="items">
+                            <P class="item_title">
+                                "PATIENT INFORMATION"
+                            </P>
+                            <p class="item_content">
+                                DISPLAY SETTINGS
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="rightbody">
+                    <div class="pa_top">
+                        <div class="pa_top_left">
+                            <p class="pa_body_content">NARRATIVE NODE</p>
+                            <p class="pa_body_title">"PATIENT INFORMATION</p>
+                        </div>
+                        <!--<div class="pa_top_right">
+                            <span id="search_content">Narrative Node Template</span>
+                            <img id="drop_down" src="image/dropdown.png" align="center"></img>
+                            <span class="line_break">|</span>
+                        </div> -->
+                        <div class="pa_top_right">
+                            <select>
+                                <option>Narrative Node Template</option>
+                                <option>Narrative 1</option>
+                                <option>Narrative 2</option>
+                                <option>Narrative 3</option>
+                            </select>
+                            <span class="line_break">|</span>
+                        </div>
+                    </div>
+                    <div class="pa_main_title">
+                        <p>EDITABLE CONTENT AREAS</p>
+                    </div>
+                    <div class="pa_main_area">
+                        <div class="pa_main_left">
+                            <div class="patient_menus pa_menu_selected">
+                                <div class="patient_menu_title">
+                                    <span>PATIENT VIDEO</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format">
+                                        <span style="margin-left: 1em">Media/Image Type</span><span class="demark"> | </span><span class="darker">600*450px</span> <br/>
+                                    </p>
+                                    <div class="pa_change_media">
+                                        <div class="pa_media_content">
+
+                                        </div>
+                                        <div class="pa_media_btn">
+                                            <button id="upper_chg_img">
+                                                > CHANGE MEDIA
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="patient_file_format">                                        
+
+                                        <span style="margin-left: 1em">Select Media Source</span><span class="demark"> | </span><span class="darker">URL, 
+                                        Vimeo, YouTube, etc.</span> <br/>
+                                    </p>
+                                    <div class="patient_media_input">
+                                        <input type="text" id="patient_media_url"/>
+                                    </div>
+                                    <div class="patient_scale">
+                                        <span class="img_ticker color_green" valign="center" sel="selected">
+                                        </span>
+                                        <span class="patient_ticker_letter">
+                                            Scale to fit
+                                        </span>
+
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="patient_menus">
+                                <div class="patient_menu_title">
+                                    <span>PATIENT TITLE</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format">
+                                        <span style="margin-left: 1em">Text Type</span><span class="demark"> | </span><span class="darker">Max Length 36 characters</span> <br/>
+                                    </p> 
+                                    <textarea class="pa_title_textarea" id="pa_textarea1" lblid="1" maxlength="36" rows="5"></textarea>
+                                    <p class="pa_title_textarea_desc" id="pa_length1" >36 characters left</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="patient_menus">
+                                <div class="patient_menu_title">
+                                    <span>PATIENT SUMMARY</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format">
+                                        <span style="margin-left: 1em">Text Type</span><span class="demark"> | </span><span class="darker">Max Length 200 characters</span> <br/>
+                                    </p>
+                                    <textarea class="pa_title_textarea" rows="9" id="pa_textarea2" lblid="2" maxlength="200"></textarea>
+                                    <p class="pa_title_textarea_desc" id="pa_length2" >200 characters left</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="patient_menus">
+                                <div class="patient_menu_title">
+                                    <span>PATIENT CHART BUTTON</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format" style="margin-top: 1.5em; margin-bottom: 0.5em">
+                                        <span style="margin-left: 1em">Text Type</span><span class="demark"> | </span><span class="darker">Max Length 24 characters</span> <br/>
+                                    </p>
+                                    <input type="text" class="pa_title_textinput" id="pa_textarea3" lblid="3" maxlength="24"/>
+                                    <p class="pa_title_textarea_desc" id="pa_length3">24 characters left</p>
+                                    <div class="clear"></div>
+                                    <div class="pa_outer_files">
+                                        <p class="patient_out_format">
+                                            <span >Linked Media</span>
+                                        </p>
+                                        <div class="patient_change_content">
+                                            <div class="patient_set_image">
+                                                <img src="image/adobe.png" class="patient_first_img"/>
+                                            </div>
+                                            <div class="patient_set_img_change">
+                                                <p class="patient_img_chg_content">
+                                                    <span>Document.PDF</span><br/>
+                                                    <button class="btn_normal" id="change_file">> CHANGE FILE</button>
+                                                   <!-- <a href=""><span>> CHANGE FILE</span></a> -->
+                                                </p>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pa_outer_files">
+                                        <p class="patient_out_format">
+                                            <span >Image Type</span><span class="demark"> | </span><span class="darker">24*24px</span> <br/>
+                                        </p>
+                                        <div class="patient_change_content">
+                                            <div class="patient_set_image">
+                                                <img src="image/setimage.png" class="patient_first_img"/>
+                                            </div>
+                                            <div class="patient_set_img_change">
+                                                <p class="patient_img_chg_content">
+                                                    <!--<a href=""><span>> CHANGE IMAGE</span></a> -->
+                                                    <button class="btn_normal" id="change_file">> CHANGE IMAGE</button>
+                                                </p>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="patient_scale" style="margin-bottom: 0.0em">
+                                        <span class="img_ticker color_green" valign="center" sel="selected">
+                                        </span>
+                                        <span class="patient_ticker_letter">
+                                            Scale to fit
+                                        </span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div> 
+                            </div>
+                            <div class="patient_menus">
+                                <div class="patient_menu_title">
+                                    <span>BACKGROUND TITLE</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format">
+                                        <span style="margin-left: 1em">Text Type</span><span class="demark"> | </span><span class="darker">Max Length 40 characters</span> <br/>
+                                    </p>
+                                    <textarea class="pa_title_textarea" rows="5" id="pa_textarea4" lblid="4" maxlength="40"></textarea>
+                                    <p class="pa_title_textarea_desc" id="pa_length4">40 characters left</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="patient_menus">
+                                <div class="patient_menu_title">
+                                    <span>BACKGROUND SUMMARY</span>
+                                    <span class="menu_show"></span>
+                                </div>
+                                <div class="patient_selected_content">
+                                    <p class="patient_file_format">
+                                        <span style="margin-left: 1em">Text Type</span><span class="demark"> | </span><span class="darker">Max Length 400 characters</span> <br/>
+                                    </p>
+                                    <textarea class="pa_title_textarea" rows="15" id="pa_textarea5" lblid="5" maxlength="400"></textarea>
+                                    <p class="pa_title_textarea_desc" id="pa_length5">400 characters left</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pa_main_right">
+                            <div class="pa_below_preview" align="center">
+                                <p class="preview_title">
+                                    <b>PREVIEW</b> ON A DEVICE
+                                </p>
+                                <div class="preview_select">
+                                    <!-- <a href="#"> -->
+                                        <div class="preview_devices" id="device1">
+                                            <img src="image/iphone_unselect.png" />
+                                            <!-- <img src="image/noneselect.png" class="nonselect"/> -->
+                                        </div>
+                                    <!-- </a> -->
+                                    <!-- <a href="#"> -->
+                                        <div class="preview_devices selected" id="device2">
+                                            <img src="image/ipad_select.png" />
+                                        </div>
+                                    <!-- </a> -->
+                                    <!-- <a href="#"> -->
+                                        <div class="preview_devices" id="device3">
+                                            <img src="image/desktop_unselect.png" />
+                                        </div>
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <!--<div class="pa_active_node">
+                                <span id="search_content">Active Node Application</span>
+                                <img id="drop_down" src="image/dropdown.png" align="center"></img>
+                                <span class="line_break">|</span>
+                            </div> -->
+                            <div class="pa_below_select">
+                                <img src="image/ipad_screen.png" id="ipad_img"/>
+                                <img src="image/iphone_screen.png" id="iphone_img"/>
+                                <img src="image/desktop_screen.png" id="desktop_img"/>
+                            </div>
+                            <div class="pa_save_btn" align="center">
+                                <button class="btn_normal">
+                                    > SAVE CHANGES
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="dlg_gallery_upload">
+        <div class="dlg_title">
+            <span>EDITOR</span>
+            <span id="dlg_close">X</span>
+        </div>
+        <div class="dlg_upload">
+            <div class="dlg_upload_title">
+                UPLOAD FILES TO MEDIA GALLERY
+            </div>
+            <div class="dlg_upload_content">
+                <form method="post" action="#">
+                    <span>Upload media from your computer</span><span class="demark"> | </span><span class="darker">max 50MB</span> <br/>
+                    <input type="file" class="media_upload" />
+                    <span>OPTIONAL: Upload related video subtitles</span><span>(.vtt for MP4 video, .smi for</span>
+                    <input type="file" class="media_upload" />
+                    <span>Or upload an image from the web:</span>
+                    <div class="more_upload">
+                        &nbsp;
+                    </div>
+                    <div class="dlg_btn_div">
+                        <button class="btn_normal" type="submit">
+                            UPLOAD
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="dlg_insert_upload">
+            <div class="dlg_insert_title">
+                CASE MEDIA GALLERY
+            </div>
+            <div class="dlg_upload_content">
+                <div class="sort">
+                    <div class="sort_content">
+                        <span id="sort_search_content">File Name</span>
+                        <img id="sort_drop_down" src="image/dropdown.png" align="center" />
+                        <span id="sort_line_break">|</span>
+                    </div>
+                    <div class="sort_title">
+                        SORT BY
+                    </div>
+                </div>
+                <div class="dlg_show_images">
+                    <div class="dlg_images">
+                        <img src="image/image.png" />
+                    </div>
+                    <div class="dlg_img_attribute">
+                        <span>2048*412.jpg</span>
+                    </div>
+                    <div class="dlg_img_btns">
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" valign="center" sel="selected">
+                            </span>
+                            <span class="ticker_letter ticker_delete">
+                                DELETE
+                            </span>
+                        </div>
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" align="center">
+                            </span>
+                            <span class="ticker_letter ticker_rollover">
+                                ROLLOVER
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dlg_show_images">
+                    <div class="dlg_images">
+                        <img src="image/image.png" />
+                    </div>
+                    <div class="dlg_img_attribute">
+                        <span>2048*920.jpg</span>
+                    </div>
+                    <div class="dlg_img_btns">
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_green" valign="center" sel="selected">
+                            </span>
+                            <span class="ticker_letter ticker_add">
+                                ADD
+                            </span>
+                        </div>
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" valign="center">
+                            </span>
+                            <span class="ticker_letter ticker_delete">
+                                DELETE
+                            </span>
+                        </div>
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" align="center">
+                            </span>
+                            <span class="ticker_letter ticker_rollover">
+                                ROLLOVER
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dlg_show_images last_show_img">
+                    <div class="dlg_images">
+                        <img src="image/image.png" />
+                    </div>
+                    <div class="dlg_img_attribute">
+                        <span>350*350.jpg</span>
+                    </div>
+                    <div class="dlg_img_btns">
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_green" valign="center" sel="selected">
+                            </span>
+                            <span class="ticker_letter ticker_add">
+                                ADD
+                            </span>
+                        </div>
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" valign="center">
+                            </span>
+                            <span class="ticker_letter ticker_delete">
+                                DELETE
+                            </span>
+                        </div>
+                        <div class="dlg_adds">
+                            <span class="img_ticker color_black" align="center">
+                            </span>
+                            <span class="ticker_letter ticker_rollover">
+                                ROLLOVER
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dlg_btn_div dlg_glr_btn">
+                    <button class="btn_normal btn_cancel">
+                        CANCEL
+                    </button>
+                    <button class="btn_normal btn_insert">
+                        INSERT MEDIA
+                    </button>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="back_fade">
+    </div>
+</body>
+</html>
